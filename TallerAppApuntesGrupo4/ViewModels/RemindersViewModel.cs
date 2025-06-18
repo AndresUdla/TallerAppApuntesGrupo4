@@ -11,21 +11,21 @@ using TallerAppApuntesGrupo4.Repositories;
 
 namespace TallerAppApuntesGrupo4.ViewModels
 {
-    public class RecordatoriosViewModel : INotifyPropertyChanged
+    public class RemindersViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<Recordatorio> Recordatorios { get; set; } = new();
+        public ObservableCollection<Reminder> Recordatorios { get; set; } = new();
 
-        private readonly RecordatorioRepository _repo = new();
+        private readonly ReminderRepository _repo = new();
 
         public ICommand AgregarCommand { get; }
         public ICommand EliminarCommand { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public RecordatoriosViewModel()
+        public RemindersViewModel()
         {
             AgregarCommand = new Command(async () => await GoToAgregarPage());
-            EliminarCommand = new Command<Recordatorio>(async (recordatorio) => await Eliminar(recordatorio));
+            EliminarCommand = new Command<Reminder>(async (recordatorio) => await Eliminar(recordatorio));
 
             CargarRecordatorios();
         }
@@ -33,11 +33,11 @@ namespace TallerAppApuntesGrupo4.ViewModels
         private async void CargarRecordatorios()
         {
             var lista = await _repo.ObtenerRecordatoriosAsync();
-            Recordatorios = new ObservableCollection<Recordatorio>(lista);
+            Recordatorios = new ObservableCollection<Reminder>(lista);
             OnPropertyChanged(nameof(Recordatorios));
         }
 
-        private async Task Eliminar(Recordatorio recordatorio)
+        private async Task Eliminar(Reminder recordatorio)
         {
             Recordatorios.Remove(recordatorio);
             await _repo.GuardarRecordatoriosAsync(Recordatorios);
