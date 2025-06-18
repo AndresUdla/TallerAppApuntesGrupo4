@@ -32,4 +32,9 @@
             ContentTemplate="{DataTemplate views:AboutPage}"
             Route="AboutPage" />
     </TabBar>
+
+    <ShellContent
+        Route="CreateReminderPage"
+        ContentTemplate="{DataTemplate views:CreateReminderPage}" />
 </Shell>
+

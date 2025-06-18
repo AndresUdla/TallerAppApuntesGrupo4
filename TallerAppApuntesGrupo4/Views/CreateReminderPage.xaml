@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TallerAppApuntesGrupo4.ViewModels"
+             x:Class="TallerAppApuntesGrupo4.Views.CreateReminderPage"
+             Title="Create Reminder"
+             x:DataType="viewModels:CreateReminderViewModel">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Reminder text:" />
+        <Entry Text="{Binding Texto}" Placeholder="Enter reminder text" />
+
+        <Label Text="Time:" />
+        <TimePicker Time="{Binding Hora}" />
+
+        <Label Text="Active?" />
+        <Switch IsToggled="{Binding Activo}" />
+
+        <Button Text="Save" Command="{Binding SaveCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>
