@@ -66,7 +66,6 @@
 	  <Folder Include="Views\" />
 	  <Folder Include="Services\" />
 	  <Folder Include="ViewModels\" />
-	  <Folder Include="Repositories\" />
 	</ItemGroup>
 
 </Project>
