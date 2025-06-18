@@ -10,26 +10,26 @@ using TallerAppApuntesGrupo4.Models;
 
 namespace TallerAppApuntesGrupo4.Repositories
 {
-    public class RecordatorioRepository
+    public class ReminderRepository
     {
         private readonly string filePath;
 
-        public RecordatorioRepository()
+        public ReminderRepository()
         {
             filePath = Path.Combine(FileSystem.AppDataDirectory, "recordatorios.json");
         }
 
-        public async Task<ObservableCollection<Recordatorio>> ObtenerRecordatoriosAsync()
+        public async Task<ObservableCollection<Reminder>> ObtenerRecordatoriosAsync()
         {
             if (!File.Exists(filePath))
-                return new ObservableCollection<Recordatorio>();
+                return new ObservableCollection<Reminder>();
 
             var json = await File.ReadAllTextAsync(filePath);
-            return JsonSerializer.Deserialize<ObservableCollection<Recordatorio>>(json)
-                   ?? new ObservableCollection<Recordatorio>();
+            return JsonSerializer.Deserialize<ObservableCollection<Reminder>>(json)
+                   ?? new ObservableCollection<Reminder>();
         }
 
-        public async Task GuardarRecordatoriosAsync(ObservableCollection<Recordatorio> recordatorios)
+        public async Task GuardarRecordatoriosAsync(ObservableCollection<Reminder> recordatorios)
         {
             var json = JsonSerializer.Serialize(recordatorios);
             await File.WriteAllTextAsync(filePath, json);

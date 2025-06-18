@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TallerAppApuntesGrupo4.Models
 {
-    public class Recordatorio
+    public class Reminder
     {
         public string Texto { get; set; }
         public TimeSpan FechaHora { get; set; }
