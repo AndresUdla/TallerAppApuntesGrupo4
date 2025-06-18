@@ -11,5 +11,7 @@ namespace TallerAppApuntesGrupo4.Models
         public string Texto { get; set; }
         public TimeSpan FechaHora { get; set; }
         public bool Activo { get; set; }
+
+        public string ActivoTexto => Activo ? "Active" : "Inactive";
     }
 }
