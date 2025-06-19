@@ -16,7 +16,7 @@ namespace TallerAppApuntesGrupo4.Models
             public int utc_offset_seconds { get; set; }
             public string timezone { get; set; }
             public string timezone_abbreviation { get; set; }
-            public int elevation { get; set; }
+            public double elevation { get; set; }
             public CurrentUnits current_units { get; set; }
             public Current current { get; set; }
         }
@@ -35,8 +35,8 @@ namespace TallerAppApuntesGrupo4.Models
             public string time { get; set; }
             public int interval { get; set; }
             public double temperature_2m { get; set; }
-            public int relative_humidity_2m { get; set; }
-            public int rain { get; set; }
+            public double relative_humidity_2m { get; set; }
+            public double rain { get; set; }
         }
     }
 }
