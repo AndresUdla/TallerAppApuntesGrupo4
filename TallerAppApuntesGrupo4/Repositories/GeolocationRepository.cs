@@ -10,7 +10,7 @@ namespace TallerAppApuntesGrupo4.Repositories
     {
         private CancellationTokenSource _cancelTokenSource;
         private bool _isCheckingLocation;
-        public async Task<Location> GetCurrentLocation()
+        public async Task<Location> GetCurrentLocationAsync()
         {
             try
             {
