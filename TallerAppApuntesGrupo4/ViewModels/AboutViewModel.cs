@@ -29,19 +29,22 @@ namespace TallerAppApuntesGrupo4.ViewModels
             {
                 MemberName = "Josue Mullo",
                 MemberAge = 20,
-                MemberFavSport = "Football",
+                MemberFavSport = "Futbol",
+                ImageMember = "jotchua.png"
             });
             Members.Add(new TeamMembers
             {
                 MemberName = "Martin Burga",
                 MemberAge = 20,
                 MemberFavSport = "Basketball",
+                ImageMember = "martincat.jpg"
             });
             Members.Add(new TeamMembers
             {
                 MemberName = "Santiago Pilamunga",
                 MemberAge = 20,
                 MemberFavSport = "League of Legends",
+                ImageMember = "jotchua.png"
             });
         }
     }
