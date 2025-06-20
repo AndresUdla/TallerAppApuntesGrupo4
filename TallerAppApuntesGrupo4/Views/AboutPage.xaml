@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerAppApuntesGrupo4.Views.AboutPage"
+             Title="AboutPage">
+    <VerticalStackLayout>
+        <Label Text="About Page" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               FontSize="32" 
+               FontAttributes="Bold" />
+        <HorizontalStackLayout>
+        <VerticalStackLayout>
+            <Image Source="martin.jpg" Aspect="Center" HeightRequest="50" WidthRequest="50" />
+            <Label Text="Martin Burga" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               FontSize="24" 
+               FontAttributes="Bold" />
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
