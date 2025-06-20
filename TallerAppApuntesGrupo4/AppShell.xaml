@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="About"
-        ContentTemplate="{DataTemplate local:NotePage}"
+        ContentTemplate="{DataTemplate local:AboutPage}"
         Route="MainPage" />
     <ShellContent
         Title="New Note"

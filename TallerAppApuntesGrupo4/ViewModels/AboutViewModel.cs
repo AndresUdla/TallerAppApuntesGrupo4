@@ -44,7 +44,7 @@ namespace TallerAppApuntesGrupo4.ViewModels
                 MemberName = "Santiago Pilamunga",
                 MemberAge = 20,
                 MemberFavSport = "League of Legends",
-                ImageMember = "jotchua.png"
+                ImageMember = "pilamungacat.jpg"
             });
         }
     }

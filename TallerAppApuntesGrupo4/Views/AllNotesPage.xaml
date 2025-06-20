@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TallerAppApuntesGrupo4.ViewModels"
              x:Class="TallerAppApuntesGrupo4.Views.AllNotesPage"
-             Title="Your Notes"
+             Title="All notes"
              x:DataType="viewModels:AllNotesViewModel">
 
     <ContentPage.BindingContext>
