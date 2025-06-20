@@ -8,8 +8,16 @@
     Title="TallerAppApuntesGrupo4">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:AllNotesPage}"
+        Title="About"
+        ContentTemplate="{DataTemplate local:NotePage}"
         Route="MainPage" />
+    <ShellContent
+        Title="New Note"
+        ContentTemplate="{DataTemplate local:NotePage}"
+        Route="NewNotePage" />
+    <ShellContent
+        Title="All notes"
+        ContentTemplate="{DataTemplate local:AllNotesPage}"
+        Route="AllNotes" />
 
 </Shell>

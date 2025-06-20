@@ -32,12 +32,14 @@ namespace TallerAppApuntesGrupo4.ViewModels
 
         public ICommand SaveCommand { get; private set; }
         public ICommand DeleteCommand { get; private set; }
+        public ICommand AllNotesCommand { get; private set; }
 
         public NoteViewModel()
         {
             _note = new Models.Note();
             SaveCommand = new AsyncRelayCommand(Save);
             DeleteCommand = new AsyncRelayCommand(Delete);
+            AllNotesCommand = new AsyncRelayCommand(AllNotesPage);
         }
 
         public NoteViewModel(Models.Note note)
@@ -58,6 +60,11 @@ namespace TallerAppApuntesGrupo4.ViewModels
         {
             _note.Delete();
             await Shell.Current.GoToAsync($"..?deleted={_note.Filename}");
+        }
+
+        private async Task AllNotesPage()
+        {
+            await Shell.Current.GoToAsync(nameof(Views.AllNotesPage));
         }
 
         void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)

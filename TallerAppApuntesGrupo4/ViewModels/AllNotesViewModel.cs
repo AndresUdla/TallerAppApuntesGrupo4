@@ -58,5 +58,6 @@ namespace TallerAppApuntesGrupo4.ViewModels
                     AllNotes.Add(new NoteViewModel(Models.Note.Load(noteId)));
             }
         }
+
     }
 }

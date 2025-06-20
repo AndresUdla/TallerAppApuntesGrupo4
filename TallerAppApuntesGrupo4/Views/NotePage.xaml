@@ -13,7 +13,6 @@
                 Placeholder="Enter your note"
                 Text="{Binding Text}"
                 HeightRequest="100" />
-
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Save"
                     Command="{Binding SaveCommand}"/>
@@ -21,7 +20,14 @@
             <Button Grid.Column="1"
                     Text="Delete"
                     Command="{Binding DeleteCommand}"/>
-
         </Grid>
+        <Button
+            x:Name="AllNotesButton"
+            Text="Todas las notas"
+            Background="Black"
+            CornerRadius="10"
+            TextColor="White"
+            HorizontalOptions="Start"
+            Command="{Binding AllNotesCommand}" />  
     </VerticalStackLayout>
 </ContentPage>
