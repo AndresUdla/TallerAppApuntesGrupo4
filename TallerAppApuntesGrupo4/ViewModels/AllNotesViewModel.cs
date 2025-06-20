@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TallerAppApuntesGrupo4.ViewModels
 {
-    internal class NotesViewModel
+    internal class AllNotesViewModel
     {
     }
 }

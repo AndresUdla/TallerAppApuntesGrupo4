@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:TallerAppApuntesGrupo4.ViewModels"
              x:Class="TallerAppApuntesGrupo4.Views.AboutPage"
-             Title="AboutPage">
+             Title="About Page">
 
     <ContentPage.BindingContext>
         <viewmodels:AboutViewModel />
@@ -36,8 +36,7 @@
                                    FontAttributes="Bold" 
                                    HorizontalTextAlignment="Center"/>
                                 <Label Text="Deporte Favorito:" 
-                                   FontSize="12"
-/>
+                                   FontSize="12"/>
                                 <Label Text="{Binding MemberFavSport}" 
                                    FontSize="15"
                                    FontAttributes="Bold"/>
