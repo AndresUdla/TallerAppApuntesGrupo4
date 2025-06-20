@@ -1,8 +1,8 @@
 namespace TallerAppApuntesGrupo4.Views;
 
-public partial class NotePage : ContentPage
+public partial class AllNotesPage : ContentPage
 {
-    public NotePage()
+    public AllNotesPage()
     {
         InitializeComponent();
     }
