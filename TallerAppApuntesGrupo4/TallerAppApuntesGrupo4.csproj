@@ -82,9 +82,6 @@
   <MauiXaml Update="Views\CreateReminderPage.xaml">
     <Generator>MSBuild:Compile</Generator>
   </MauiXaml>
-  <MauiXaml Update="Views\NotesPage.xaml">
-    <Generator>MSBuild:Compile</Generator>
-  </MauiXaml>
   <MauiXaml Update="Views\ReminderPage.xaml">
     <Generator>MSBuild:Compile</Generator>
   </MauiXaml>

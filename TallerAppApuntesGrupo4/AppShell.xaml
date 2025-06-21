@@ -11,8 +11,8 @@
         <ShellContent
             Title="Notes"
             Icon="notes.png"
-            ContentTemplate="{DataTemplate views:NotesPage}"
-            Route="NotesPage" />
+            ContentTemplate="{DataTemplate views:NotePage}"
+            Route="NotePage" />
 
         <ShellContent
             Title="Recordatorios"
