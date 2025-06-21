@@ -14,7 +14,7 @@
             FontSize="18"
             TextColor="White"
             HorizontalOptions="Center"
-            Text="{Binding WeatherDataInfo.current.time}"
+            Text="{Binding HoraFormateada}"
         />
             
         <Label 

@@ -23,6 +23,7 @@ namespace TallerAppApuntesGrupo4.ViewModels
                 {
                     _weatherData = value;
                     OnPropertyChanged();
+                    OnPropertyChanged(nameof(HoraFormateada));
                 }
             }
         }
@@ -37,6 +38,18 @@ namespace TallerAppApuntesGrupo4.ViewModels
             WeatherRepository weatherRepository = new WeatherRepository();
             WeatherDataInfo = await weatherRepository.GetCurrentLocationWeatherData();
         }
+        public string HoraFormateada
+        {
+            get
+            {
+                if (DateTime.TryParse(WeatherDataInfo?.current?.time, out DateTime hora))
+                {
+                    return hora.ToString("dd/MM/yyyy HH:mm");
+                }
+                return "--:--";
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string name = "") =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
