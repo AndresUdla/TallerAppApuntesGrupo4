@@ -30,7 +30,7 @@ namespace TallerAppApuntesGrupo4.ViewModels
                 MemberName = "Josue Mullo",
                 MemberAge = 20,
                 MemberFavSport = "Futbol",
-                ImageMember = "jotchua.png"
+                ImageMember = "jotchua.jpg"
             });
             Members.Add(new TeamMembers
             {

@@ -24,7 +24,7 @@ namespace TallerAppApuntesGrupo4.ViewModels
 
         private async Task NewNoteAsync()
         {
-            await Shell.Current.GoToAsync(nameof(Views.NotePage));
+            await Shell.Current.GoToAsync("///NotePage");
         }
 
         private async Task SelectNoteAsync(ViewModels.NoteViewModel note)
