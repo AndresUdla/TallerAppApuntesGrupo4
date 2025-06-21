@@ -22,15 +22,15 @@ namespace TallerAppApuntesGrupo4.ViewModels
             SelectNoteCommand = new AsyncRelayCommand<ViewModels.NoteViewModel>(SelectNoteAsync);
         }
 
-        private async Task NewNoteAsync()
+        public async Task NewNoteAsync()
         {
             await Shell.Current.GoToAsync("///NotePage");
         }
 
-        private async Task SelectNoteAsync(ViewModels.NoteViewModel note)
+        public async Task SelectNoteAsync(ViewModels.NoteViewModel note)
         {
             if (note != null)
-                await Shell.Current.GoToAsync($"{nameof(Views.NotePage)}?load={note.Identifier}");
+                await Shell.Current.GoToAsync($"{"///NotePage"}?load={note.Identifier}");
         }
 
         void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)
