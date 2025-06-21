@@ -8,42 +8,42 @@
     <ContentPage.BindingContext>
         <viewmodels:AboutViewModel />
     </ContentPage.BindingContext>
+
     <ScrollView>
         <VerticalStackLayout Padding="20">
             <Label Text="Miembros de Equipo"
-               FontSize="25"
-               FontAttributes="Bold"/>
+                   FontSize="25"
+                   FontAttributes="Bold"/>
             <CollectionView ItemsSource="{Binding Members}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="10" />
+                                       ItemSpacing="10" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="Black"
-                           CornerRadius="20"
-                           Padding="10"
-                           Margin="10"
-                           WidthRequest="200"
-                           BackgroundColor="AliceBlue"
-                           >
+                               CornerRadius="20"
+                               Padding="10"
+                               Margin="10"
+                               WidthRequest="200"
+                               BackgroundColor="AliceBlue">
                             <VerticalStackLayout Spacing="5">
                                 <Image Source="{Binding ImageMember}"
-                                   HeightRequest="80"
-                                   WidthRequest="90"/>
+                                       HeightRequest="80"
+                                       WidthRequest="90"/>
                                 <Label Text="{Binding MemberName}"
-                                   FontSize="20"
-                                   FontAttributes="Bold" 
-                                   HorizontalTextAlignment="Center"/>
+                                       FontSize="20"
+                                       FontAttributes="Bold" 
+                                       HorizontalTextAlignment="Center"/>
                                 <Label Text="Deporte Favorito:" 
-                                   FontSize="12"/>
+                                       FontSize="12"/>
                                 <Label Text="{Binding MemberFavSport}" 
-                                   FontSize="15"
-                                   FontAttributes="Bold"/>
+                                       FontSize="15"
+                                       FontAttributes="Bold"/>
                                 <Label Text="Edad:" 
-                                   FontSize="12"/>
+                                       FontSize="12"/>
                                 <Label Text="{Binding MemberAge}" 
-                                   FontAttributes="Bold"/>
+                                       FontAttributes="Bold"/>
                             </VerticalStackLayout>
                         </Frame>
                     </DataTemplate>
