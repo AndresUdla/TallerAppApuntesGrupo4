@@ -21,7 +21,7 @@ namespace TallerAppApuntesGrupo4.Repositories
         {
             string latitude_str=latitude.ToString().Replace(",",".");
             string longitude_str = longitude.ToString().Replace(",", ".");
-            string url = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude_str + "&longitude=" + longitude_str + "&current=temperature_2m,relative_humidity_2m,rain";
+            string url = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude_str + "&longitude=" + longitude_str + "&current=temperature_2m,relative_humidity_2m,rain&timezone=America%2FGuayaquil";
             
             HttpClient httpClient = new HttpClient();
 
@@ -29,7 +29,7 @@ namespace TallerAppApuntesGrupo4.Repositories
             response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadAsStringAsync();
 
-            WeatherData data = JsonConvert.DeserializeObject<WeatherData>(result);
+            WeatherData data = JsonConvert.DeserializeObject<WeatherData>(result);  
             return data;
         }
     }
