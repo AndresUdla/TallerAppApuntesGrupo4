@@ -1,11 +1,15 @@
-using TallerAppApuntesGrupo4.ViewModels;
+using TallerAppApuntesGrupo4.Models;
+using System.Text.Json;
 
-namespace TallerAppApuntesGrupo4.Views;
-
-public partial class NotePage : ContentPage
+namespace TallerAppApuntesGrupo4.Views
 {
-    public NotePage()
+    public partial class NotePage: ContentPage
     {
-        InitializeComponent();
+        public NotePage()
+        {
+            InitializeComponent();
+            
+        }
     }
+
 }

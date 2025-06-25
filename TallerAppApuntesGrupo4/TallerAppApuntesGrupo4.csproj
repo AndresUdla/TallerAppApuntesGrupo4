@@ -65,7 +65,6 @@
 	</ItemGroup>
 
 <ItemGroup>
-  <Folder Include="Repositories\" />
   <Folder Include="Services\" />
 </ItemGroup>
 

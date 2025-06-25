@@ -28,7 +28,6 @@ namespace TallerAppApuntesGrupo4.Repositories
             
             catch (Exception ex)
             {
-                // Unable to get location
             }
             finally
             {

@@ -7,70 +7,72 @@
     <ContentPage.BindingContext>
         <namespace:WeatherViewModel />
     </ContentPage.BindingContext>
-    <StackLayout BackgroundColor="#4DB8FF" Padding="20" Spacing="25">
-        <HorizontalStackLayout>
-        <Label 
-            x:Name="LabelHora"
-            FontSize="18"
-            TextColor="White"
-            HorizontalOptions="Center"
-            Text="{Binding HoraFormateada}"
-        />
-            
-        <Label 
-            x:Name="LabelHoraUnit"
-            Padding="5"
-            FontSize="18"
-            TextColor="White"
-            HorizontalOptions="Center"
-            Text="{Binding WeatherDataInfo.timezone_abbreviation}"
-        />
-        </HorizontalStackLayout>
-        <Label 
-            x:Name="LabelTemperatura"
-            FontSize="60"
-            TextColor="White"
-            HorizontalOptions="Center"
-            Text="{Binding WeatherDataInfo.current.temperature_2m}"
-        />
-        <Label 
-            x:Name="LabelTemperaturaUnit"
-            FontSize="24"
-            TextColor="White"
-            HorizontalOptions="Center"
-            Text="{Binding WeatherDataInfo.current_units.temperature_2m}"
-        />
-        <Image Source="clima2.png" HeightRequest="100"
-               WidthRequest="100"
-               HorizontalOptions="Center"
-            />
-        <Label
-            Text="Humedad: "
-            FontAttributes="Bold"
-            TextColor="White"
-        />
-        <HorizontalStackLayout>
-        <Label 
-            x:Name="LabelHumidity"
-            TextColor="White"
-            Text="{Binding WeatherDataInfo.current.relative_humidity_2m}"
-        />
-        <Label 
-            x:Name="LabelHumidityUnit"
-            TextColor="White"
-            Text="{Binding WeatherDataInfo.current_units.relative_humidity_2m}"
-        />
-        </HorizontalStackLayout>
-        <Label
-            Text="LLuvia: "
-            FontAttributes="Bold"
-            TextColor="White"
-            Margin="5,0,0,0"
-        />
-        <Label 
-            x:Name="LabelLluvia"
-            TextColor="White"
-            Text="{Binding WeatherDataInfo.current.rain}"
-        />
-    </StackLayout>
+    
+    <ScrollView>
+        <StackLayout BackgroundColor="#4DB8FF" Padding="20" Spacing="25">
+            <HorizontalStackLayout>
+                <Label 
+                    x:Name="LabelHora"
+                    FontSize="18"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Text="{Binding HoraFormateada}" />
+
+                <Label 
+                    x:Name="LabelHoraUnit"
+                    Padding="5"
+                    FontSize="18"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Text="{Binding WeatherDataInfo.timezone_abbreviation}" />
+            </HorizontalStackLayout>
+
+            <Label 
+                x:Name="LabelTemperatura"
+                FontSize="60"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Text="{Binding WeatherDataInfo.current.temperature_2m}" />
+
+            <Label 
+                x:Name="LabelTemperaturaUnit"
+                FontSize="24"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Text="{Binding WeatherDataInfo.current_units.temperature_2m}" />
+
+            <Image Source="clima2.png"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center" />
+
+            <Label
+                Text="Humedad: "
+                FontAttributes="Bold"
+                TextColor="White" />
+
+            <HorizontalStackLayout>
+                <Label 
+                    x:Name="LabelHumidity"
+                    TextColor="White"
+                    Text="{Binding WeatherDataInfo.current.relative_humidity_2m}" />
+
+                <Label 
+                    x:Name="LabelHumidityUnit"
+                    TextColor="White"
+                    Text="{Binding WeatherDataInfo.current_units.relative_humidity_2m}" />
+            </HorizontalStackLayout>
+
+            <Label
+                Text="LLuvia: "
+                FontAttributes="Bold"
+                TextColor="White"
+                Margin="5,0,0,0" />
+
+            <Label 
+                x:Name="LabelLluvia"
+                TextColor="White"
+                Text="{Binding WeatherDataInfo.current.rain}" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -7,12 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="TallerAppApuntesGrupo4">
 
+
     <TabBar>
         <ShellContent
-            Title="Notes"
+            Title="Notas"
             Icon="notes.png"
-            ContentTemplate="{DataTemplate views:NotePage}"
-            Route="NotePage" />
+            ContentTemplate="{DataTemplate views:AllNotesPage}"
+            Route="AllNotesPage" />
 
         <ShellContent
             Title="Recordatorios"
@@ -36,6 +37,8 @@
     <ShellContent
         Route="CreateReminderPage"
         ContentTemplate="{DataTemplate views:CreateReminderPage}" />
+
+    <ShellContent
+        Route="NotePage"
+        ContentTemplate="{DataTemplate views:NotePage}" />
 </Shell>
-
-
